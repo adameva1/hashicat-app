@@ -118,10 +118,10 @@ resource "null_resource" "configure-cat-app" {
     }
   }
 }
-module "cloud-storage" {
-  source     = "app.terraform.io/TammyDBAG/cloud-storage/google"
-  version    = "3.4.1"
-  names      = ["hashicat-private"]
-  prefix     = var.prefix
-  project_id = var.project
+  module "cloud-storage" {
+    source     = "app.terraform.io/TammyDBAG/cloud-storage/google"
+    version    = "3.4.1"
+    names      = ["hashicat-private"]
+    prefix     = var.prefix
+    project_id = var.project
 }
